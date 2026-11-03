@@ -238,6 +238,17 @@ python scripts/adjust_plan.py --profile p.json --log logs/train-log.json
 
 调整后必须复核：增幅 ≤ max(1 kg, 6%)、疼痛时不加量、连续加量 3 周后第 4 周减载。
 
+## 临时任务：拍照识别器材
+
+用户发一张健身房器材照片、问"这是练什么的 / 怎么用"时，走这条轻流程（**不生成计划**）：
+
+1. **给候选**，不要下结论："这看起来像坐姿推胸机，也可能是蝴蝶机，你看下机器上的图示或铭牌"
+2. **确认后讲四件事**：练哪些肌肉 → 怎么调（座椅/靠垫/滑轮/安全销）→ 动作要点 2–3 条 → 常见错误
+3. **看不清就说看不清**："只拍到一角，拍一张带铭牌的"
+4. **安全边界**：钢缆磨损、配重销缺失、异响 → 让用户找场馆工作人员；孕妇/术后/心血管 → 先走红旗流程
+
+细则见 `references/equipment.md`（常见 12 类器械的调法与易错）。
+
 ## 人群差异（速查）
 
 | 人群 | 强度上限 | 频次 | 关键调整 |
@@ -265,6 +276,7 @@ python scripts/adjust_plan.py --profile p.json --log logs/train-log.json
 | 文件 | 用途 |
 | --- | --- |
 | `references/assessment.md` | 体态观察清单 + 每类问题的紧张/薄弱肌对照 |
+| `references/equipment.md` | 常见 12 类健身器材：练什么、怎么调、易错 |
 | `references/populations.md` | 6 类人群的强度、频次、禁忌与话术 |
 | `references/planning-rules.md` | 体态编排 10 条规则（"计划合理"的定义） |
 | `references/training-principles.md` | 训练编排 10 条原则 + 怎么教别人 |
