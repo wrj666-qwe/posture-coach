@@ -1,0 +1,8 @@
+{
+  "population": "postpartum",
+  "goal": "recover",
+  "minutes": 15,
+  "days_per_week": 3,
+  "issues": ["ant"],
+  "red_flags": []
+}

@@ -1,0 +1,7 @@
+{
+  "_说明": "每条 = 一个动作在一次训练里的表现。weight 单位 kg，自重填 0；reps 写每一组实际完成数；rpe 用 1–10；pain 用 0–10。",
+  "entries": [
+    {"date": "2026-11-02", "exercise": "箱式深蹲", "weight": 0, "reps": [12, 12, 11], "rpe": 7, "pain": 0, "note": ""},
+    {"date": "2026-11-02", "exercise": "哑铃弯举", "weight": 8, "reps": [12, 10, 9], "rpe": 8, "pain": 0, "note": "最后一组有点甩"}
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-31",
+  "notes": "动作库唯一数据源。plan_builder.py 读取本文件；references/exercise-library.md 由 --dump-library 生成。",
+  "actions": [
+    {
+      "id": "n1", "name": "枕下肌群球压", "type": "relax", "modules": ["neck"],
+      "level": 1, "minutes": 1.5, "equipment": "ball",
+      "target": "后脑勺下缘 / 上颈段",
+      "how": "仰卧屈膝，网球放在枕骨下缘，头部重量轻压，缓慢左右转头",
+      "dose": "60–90 秒",
+      "mistake": "球放太低压到颈椎中段、用力过猛",
+      "contra": ["numb"], "populations": []
+    },
+    {
+      "id": "n2", "name": "上斜方 + 肩胛提肌拉伸", "type": "relax", "modules": ["neck"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "颈后两侧 → 肩胛内上角",
+      "how": "坐姿一手抓椅边，头向对侧侧屈并微转向对侧腋窝，另一手轻扶头部",
+      "dose": "每侧 25–30 秒 × 2",
+      "mistake": "耸肩、猛拽、憋气",
+      "contra": ["numb"], "populations": []
+    },
+    {
+      "id": "n3", "name": "胸锁乳突肌轻拉伸", "type": "relax", "modules": ["neck"],
+      "level": 2, "minutes": 1, "equipment": "none",
+      "target": "颈前侧",
+      "how": "头向对侧转并轻后仰，手只扶不压",
+      "dose": "每侧 15 秒 × 2",
+      "mistake": "按压颈动脉、过度后仰",
+      "contra": ["numb", "vertigo"], "populations": []
+    },
+    {
+      "id": "n4", "name": "靠墙收下巴", "type": "train", "modules": ["neck"],
+      "level": 1, "minutes": 2, "equipment": "wall",
+      "target": "颈深屈肌",
+      "how": "后脑、上背、臀贴墙，下巴水平后收做出双下巴，保持 5 秒",
+      "dose": "10 次 × 5 秒 × 2 组",
+      "mistake": "低头或抬头、耸肩、腰离墙",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "n5", "name": "仰卧点头", "type": "train", "modules": ["neck"],
+      "level": 2, "minutes": 1.5, "equipment": "none",
+      "target": "颈深屈肌（低负荷变式）",
+      "how": "仰卧屈膝，后脑轻压床面收下巴，保持 5 秒",
+      "dose": "10 次 × 5 秒 × 2 组",
+      "mistake": "下巴前伸、用颈前侧发力",
+      "contra": ["vertigo"], "populations": []
+    },
+    {
+      "id": "n6", "name": "四点跪收下巴", "type": "train", "modules": ["neck"],
+      "level": 3, "minutes": 2, "equipment": "none",
+      "target": "颈深屈肌耐力",
+      "how": "四点跪保持背部平，下巴后收停 5 秒再放松",
+      "dose": "8 次 × 5 秒 × 2 组",
+      "mistake": "塌腰、抬头",
+      "contra": [], "populations": ["active"]
+    },
+
+    {
+      "id": "s1", "name": "门框胸肌拉伸（3 个高度）", "type": "relax", "modules": ["shoulder"],
+      "level": 1, "minutes": 1.5, "equipment": "wall",
+      "target": "胸大肌上 / 中 / 下束",
+      "how": "前臂贴门框，肘分别与肩平、略高、略低，身体缓缓前倾",
+      "dose": "每高度每侧 20–30 秒",
+      "mistake": "塌腰、耸肩、拉到刺痛",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "s2", "name": "胸小肌球压", "type": "relax", "modules": ["shoulder"],
+      "level": 2, "minutes": 1.5, "equipment": "ball",
+      "target": "锁骨下外侧 / 腋前",
+      "how": "网球靠墙压住该点，缓慢上下滚动，酸点停 20 秒",
+      "dose": "60 秒 / 侧",
+      "mistake": "压到腋窝血管神经、痛到屏气",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "s3", "name": "背阔肌拉伸", "type": "relax", "modules": ["shoulder"],
+      "level": 1, "minutes": 1, "equipment": "wall",
+      "target": "腋下 → 腰侧",
+      "how": "双手扶墙或抓杆，屈髋后坐让背拉长，全程呼吸",
+      "dose": "30 秒 × 2",
+      "mistake": "弓背、憋气",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "s4", "name": "靠墙天使", "type": "train", "modules": ["shoulder"],
+      "level": 1, "minutes": 2, "equipment": "wall",
+      "target": "中下斜方 / 菱形肌 / 肩外旋肌",
+      "how": "背贴墙，手臂 W 位沿墙上滑到 Y，肋骨不外翻",
+      "dose": "8–10 次 × 2 组",
+      "mistake": "腰离墙、耸肩、手臂离开墙面",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "s5", "name": "俯卧 Y-T-W", "type": "train", "modules": ["shoulder"],
+      "level": 2, "minutes": 3, "equipment": "none",
+      "target": "中下斜方 / 菱形肌 / 后三角肌",
+      "how": "俯卧，Y / T / W 三个字母分开做，肩胛后缩下沉",
+      "dose": "每字母 8 次 × 2 组",
+      "mistake": "抬头用腰发力、耸肩",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "s6", "name": "弹力带面拉", "type": "train", "modules": ["shoulder"],
+      "level": 2, "minutes": 2, "equipment": "band",
+      "target": "肩后侧 / 肩袖",
+      "how": "轻阻力，肘抬平向后拉，肩胛下沉",
+      "dose": "12–15 次 × 2 组",
+      "mistake": "阻力过大、用腰后仰",
+      "contra": [], "populations": ["active"]
+    },
+    {
+      "id": "s7", "name": "弹力带外旋", "type": "train", "modules": ["shoulder"],
+      "level": 2, "minutes": 1.5, "equipment": "band",
+      "target": "肩袖外旋肌",
+      "how": "肘贴身屈 90°，前臂向外打开",
+      "dose": "12–15 次 × 2 组",
+      "mistake": "肘离开身体、用腰转",
+      "contra": [], "populations": ["active"]
+    },
+
+    {
+      "id": "sd1", "name": "高侧上斜方拉伸", "type": "relax", "modules": ["side"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "偏高侧颈肩",
+      "how": "同斜方肌拉伸，重点放在偏高的那一侧",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "耸肩、猛拽",
+      "contra": ["numb"], "populations": []
+    },
+    {
+      "id": "sd2", "name": "高侧腰方肌拉伸", "type": "relax", "modules": ["side"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "偏高侧腰侧",
+      "how": "站姿对侧手举过头，向低侧侧屈，骨盆保持中立",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "骨盆跟着歪、憋气",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "sd3", "name": "低侧肩胛上提", "type": "train", "modules": ["side"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "偏低侧上斜方肌",
+      "how": "偏低侧肩膀向耳朵方向耸起，停 3 秒后缓慢放下",
+      "dose": "10 次 × 2 组",
+      "mistake": "用脖子侧屈代替耸肩",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "sd4", "name": "弱侧单臂侧平板", "type": "train", "modules": ["side"],
+      "level": 2, "minutes": 2, "equipment": "none",
+      "target": "侧腹 / 肩胛稳定",
+      "how": "肘撑侧卧，髋离地，身体成一条线",
+      "dose": "15–20 秒 × 2",
+      "mistake": "髋下沉、肩塌陷",
+      "contra": [], "populations": []
+    },
+
+    {
+      "id": "p1", "name": "跪姿髂腰肌拉伸", "type": "relax", "modules": ["pelvis"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "髋前侧 / 髂腰肌",
+      "how": "单膝跪地，先收腹夹臀让骨盆后倾，再身体微前移",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "塌腰翘臀（等于白拉）、骨盆歪斜",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p2", "name": "股直肌拉伸", "type": "relax", "modules": ["pelvis"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "大腿前侧",
+      "how": "跪姿或俯卧拉脚踝靠近臀部，双膝并拢、骨盆后倾",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "用腰代偿、膝盖向外撇",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p3", "name": "猫牛", "type": "relax", "modules": ["pelvis", "pelvis_post"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "腰背整体",
+      "how": "四点跪，吸气沉背抬头，呼气拱背低头",
+      "dose": "8–10 次",
+      "mistake": "只动腰不动胸椎、速度太快",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p4", "name": "臀桥", "type": "train", "modules": ["pelvis"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "臀大肌 / 腘绳肌",
+      "how": "仰卧屈膝，先骨盆后倾再顶髋至肩髋膝一条线，顶端停 2 秒",
+      "dose": "12–15 次 × 2–3 组",
+      "mistake": "用腰顶、肋骨外翻、膝内扣",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p5", "name": "死虫", "type": "train", "modules": ["pelvis", "core"],
+      "level": 2, "minutes": 2, "equipment": "none",
+      "target": "腹横肌 / 腹斜肌",
+      "how": "仰卧腰贴地，对侧手脚缓慢伸出再收回",
+      "dose": "每侧 8–10 次 × 2 组",
+      "mistake": "腰离地、憋气、速度太快",
+      "contra": ["postpartum"], "populations": []
+    },
+    {
+      "id": "p6", "name": "平板支撑", "type": "train", "modules": ["pelvis", "core"],
+      "level": 2, "minutes": 1.5, "equipment": "none",
+      "target": "核心整体",
+      "how": "肘撑，臀不塌不翘，均匀呼吸",
+      "dose": "20–30 秒 × 2–3 组",
+      "mistake": "塌腰、耸肩、憋气",
+      "contra": ["postpartum"], "populations": []
+    },
+    {
+      "id": "p7", "name": "鸟狗", "type": "train", "modules": ["core", "pelvis_post"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "核心稳定 / 竖脊肌",
+      "how": "四点跪，对侧手脚伸出，骨盆不晃",
+      "dose": "每侧 8 次 × 2 组",
+      "mistake": "塌腰、抬腿过高",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p8", "name": "腘绳肌拉伸", "type": "relax", "modules": ["pelvis_post"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "大腿后侧",
+      "how": "坐姿单腿伸直，脊柱拉长向前倾，不弓背",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "弓背够脚尖、憋气",
+      "contra": ["numb"], "populations": []
+    },
+    {
+      "id": "p9", "name": "仰卧抱膝", "type": "relax", "modules": ["pelvis_post"],
+      "level": 1, "minutes": 1, "equipment": "none",
+      "target": "腰背 / 臀部",
+      "how": "仰卧抱单膝向胸口，另一腿伸直或屈膝",
+      "dose": "每侧 20–30 秒",
+      "mistake": "抬头耸肩、憋气",
+      "contra": ["pregnant"], "populations": []
+    },
+    {
+      "id": "p10", "name": "站姿抬膝", "type": "train", "modules": ["pelvis_post"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "髋屈肌（髂腰肌）",
+      "how": "扶墙站稳，一侧膝盖抬到髋高，保持骨盆中立",
+      "dose": "每侧 10–12 次 × 2 组",
+      "mistake": "塌腰代偿、身体后仰",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "p11", "name": "俯卧眼镜蛇", "type": "train", "modules": ["pelvis_post"],
+      "level": 2, "minutes": 1.5, "equipment": "none",
+      "target": "腰背伸展肌",
+      "how": "俯卧，手掌撑地缓慢抬起上身，骨盆贴地",
+      "dose": "8 次 × 5 秒 × 2 组",
+      "mistake": "耸肩、腰椎有挤压感还硬撑",
+      "contra": ["pain"], "populations": []
+    },
+    {
+      "id": "p12", "name": "臀部拉伸（坐姿 4 字）", "type": "relax", "modules": ["pelvis_post"],
+      "level": 2, "minutes": 1.5, "equipment": "none",
+      "target": "臀大肌 / 梨状肌",
+      "how": "坐姿脚踝搭对侧膝上，身体前倾",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "弓背、压膝盖",
+      "contra": [], "populations": []
+    },
+
+    {
+      "id": "l1", "name": "蚌式", "type": "train", "modules": ["lower"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "臀中肌",
+      "how": "侧卧屈髋屈膝、脚跟并拢，膝盖打开后缓慢收回",
+      "dose": "15 次 × 2 / 侧",
+      "mistake": "骨盆后倒、用腰发力",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "l2", "name": "单腿站立", "type": "train", "modules": ["lower", "balance"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "足踝稳定 / 臀中肌",
+      "how": "单腿站立，可扶墙，保持骨盆水平",
+      "dose": "30 秒 × 2 / 侧",
+      "mistake": "骨盆侧倾、支撑腿膝内扣",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "l3", "name": "侧卧抬腿", "type": "train", "modules": ["lower"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "臀中肌 / 髋外展",
+      "how": "侧卧，上侧腿伸直向上抬起，脚尖朝前",
+      "dose": "12–15 次 × 2 / 侧",
+      "mistake": "身体后倒、抬太高用腰",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "l4", "name": "内收肌拉伸", "type": "relax", "modules": ["lower"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "大腿内侧",
+      "how": "坐姿脚掌相对或侧弓步，膝盖下沉",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "压膝、弓背",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "l5", "name": "小腿三头肌拉伸", "type": "relax", "modules": ["lower", "foot"],
+      "level": 1, "minutes": 1.5, "equipment": "wall",
+      "target": "小腿后侧",
+      "how": "弓步前压，后脚跟踩实地面",
+      "dose": "每侧 30 秒 × 2",
+      "mistake": "后脚跟离地、弓背",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "l6", "name": "靠墙静蹲", "type": "train", "modules": ["lower"],
+      "level": 2, "minutes": 2, "equipment": "wall",
+      "target": "股四头肌 / 臀部",
+      "how": "背贴墙下滑至大腿接近水平，膝盖不超过脚尖",
+      "dose": "20–30 秒 × 2–3 组",
+      "mistake": "膝盖内扣、憋气",
+      "contra": ["pain"], "populations": ["senior"]
+    },
+    {
+      "id": "l7", "name": "台阶踏步", "type": "train", "modules": ["lower", "balance"],
+      "level": 2, "minutes": 2, "equipment": "none",
+      "target": "臀腿 / 平衡",
+      "how": "一脚踏上台阶，另一腿跟上再退回，扶墙保持稳定",
+      "dose": "每侧 8–10 次 × 2 组",
+      "mistake": "膝内扣、身体歪斜",
+      "contra": ["pain"], "populations": []
+    },
+
+    {
+      "id": "f1", "name": "短足练习", "type": "train", "modules": ["foot"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "足内在肌 / 足弓",
+      "how": "脚跟与前脚掌贴地，把足弓缩短抬高，脚趾不卷",
+      "dose": "保持 5 秒 × 10 次 × 2 组",
+      "mistake": "脚趾抓地卷曲、膝内扣",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "f2", "name": "足底球滚", "type": "relax", "modules": ["foot"],
+      "level": 1, "minutes": 1.5, "equipment": "ball",
+      "target": "足底筋膜",
+      "how": "坐姿或站姿，网球在脚底缓慢滚动",
+      "dose": "60–90 秒 / 侧",
+      "mistake": "压到刺痛还继续、站不稳",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "f3", "name": "提踵", "type": "train", "modules": ["foot"],
+      "level": 1, "minutes": 1.5, "equipment": "wall",
+      "target": "小腿三头肌 / 足踝稳定",
+      "how": "扶墙站稳，缓慢抬起脚跟再落下",
+      "dose": "15 次 × 2 组",
+      "mistake": "脚踝外翻、弹震式起落",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "f4", "name": "脚趾分开 / 抓毛巾", "type": "train", "modules": ["foot"],
+      "level": 1, "minutes": 1, "equipment": "none",
+      "target": "足趾活动度",
+      "how": "脚趾尽量张开再抓握毛巾",
+      "dose": "10 次 × 2 组",
+      "mistake": "用小腿代偿、动作过快",
+      "contra": [], "populations": ["senior"]
+    },
+
+    {
+      "id": "b1", "name": "腹式呼吸", "type": "relax", "modules": ["breath"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "膈肌 / 肋廓",
+      "how": "坐姿或仰卧，鼻吸 4 秒、口呼 6 秒，腹部起伏",
+      "dose": "10 次呼吸 × 2 组",
+      "mistake": "耸肩式胸式呼吸、憋气",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "b2", "name": "90/90 呼吸", "type": "relax", "modules": ["breath"],
+      "level": 1, "minutes": 2, "equipment": "none",
+      "target": "肋廓 / 腹壁",
+      "how": "仰卧双腿搭椅面成 90°，呼气时肋骨下沉",
+      "dose": "8 次呼吸 × 2 组",
+      "mistake": "腰部拱起、用力吸",
+      "contra": ["pregnant"], "populations": []
+    },
+
+    {
+      "id": "ba1", "name": "单腿站立（扶墙）", "type": "train", "modules": ["balance"],
+      "level": 1, "minutes": 1.5, "equipment": "wall",
+      "target": "平衡 / 踝稳定",
+      "how": "扶墙单腿站立，逐渐减少扶手",
+      "dose": "20–30 秒 × 2 / 侧",
+      "mistake": "憋气、身体歪",
+      "contra": [], "populations": []
+    },
+    {
+      "id": "ba2", "name": "脚跟对脚尖走", "type": "train", "modules": ["balance"],
+      "level": 1, "minutes": 1.5, "equipment": "none",
+      "target": "动态平衡",
+      "how": "沿直线脚跟接脚尖缓慢行走，旁侧可扶",
+      "dose": "10–15 步 × 2 组",
+      "mistake": "速度过快、低头看脚",
+      "contra": [], "populations": []
+    },
+
+    {
+      "id": "w1", "name": "温和步行", "type": "relax", "modules": ["walk"],
+      "level": 1, "minutes": 10, "equipment": "none",
+      "target": "全身循环 / 组织耐受",
+      "how": "能正常说话的速度走 10–15 分钟，全程不憋气",
+      "dose": "10–15 分钟",
+      "mistake": "追求速度、走到疼痛加重",
+      "contra": [], "populations": []
+    }
+  ]
+}

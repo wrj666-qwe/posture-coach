@@ -1,0 +1,8 @@
+{
+  "population": "office",
+  "goal": "look",
+  "minutes": 15,
+  "days_per_week": 4,
+  "issues": ["head", "round", "ant"],
+  "red_flags": []
+}

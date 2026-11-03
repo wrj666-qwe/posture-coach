@@ -1,0 +1,10 @@
+{
+  "goal": "muscle",
+  "level": "beginner",
+  "days": 3,
+  "minutes": 45,
+  "equipment": ["dumbbell", "band"],
+  "injuries": [],
+  "red_flags": [],
+  "posture_focus": ["neck", "shoulder"]
+}

@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {"date": "2026-10-27", "exercise": "箱式深蹲", "weight": 0, "reps": [12, 12, 12], "rpe": 6, "pain": 1},
+    {"date": "2026-10-27", "exercise": "上斜俯卧撑", "weight": 0, "reps": [12, 12, 11], "rpe": 7, "pain": 1},
+    {"date": "2026-10-27", "exercise": "弹力带划船", "weight": 0, "reps": [12, 12, 12], "rpe": 6, "pain": 0},
+    {"date": "2026-10-27", "exercise": "哑铃弯举", "weight": 8, "reps": [12, 10, 9], "rpe": 8, "pain": 0},
+    {"date": "2026-10-29", "exercise": "臀桥", "weight": 0, "reps": [15, 15, 15], "rpe": 6, "pain": 0},
+    {"date": "2026-10-29", "exercise": "弹力带肩推", "weight": 0, "reps": [12, 12, 10], "rpe": 7, "pain": 1},
+    {"date": "2026-10-29", "exercise": "平板支撑", "weight": 0, "reps": [30, 30, 25], "rpe": 7, "pain": 1},
+    {"date": "2026-10-31", "exercise": "箱式深蹲", "weight": 0, "reps": [15, 15, 15], "rpe": 6, "pain": 0},
+    {"date": "2026-10-31", "exercise": "哑铃弯举", "weight": 8, "reps": [12, 12, 12], "rpe": 7, "pain": 0},
+    {"date": "2026-10-31", "exercise": "单臂农夫走", "weight": 10, "reps": [30, 30, 25], "rpe": 7, "pain": 2},
+    {"date": "2026-10-31", "exercise": "弹力带肩推", "weight": 0, "reps": [12, 11, 10], "rpe": 8, "pain": 3},
+    {"date": "2026-10-31", "exercise": "平板支撑", "weight": 0, "reps": [40, 35, 30], "rpe": 9, "pain": 2}
+  ]
+}

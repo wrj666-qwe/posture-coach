@@ -1,0 +1,683 @@
+{
+  "generated_from": "strength_exercises.json",
+  "items": [
+    {
+      "id": "sq_box",
+      "name": "箱式深蹲",
+      "pattern": "squat",
+      "pattern_cn": "蹲",
+      "primary": [
+        "股四头肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "深蹲教学（新手向）",
+          "url": "https://www.bilibili.com/video/BV1xdCbYgEiQ/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E7%AE%B1%E5%BC%8F%E6%B7%B1%E8%B9%B2%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "sq_goblet",
+      "name": "高脚杯深蹲",
+      "pattern": "squat",
+      "pattern_cn": "蹲",
+      "primary": [
+        "股四头肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "深蹲标准动作讲解",
+          "url": "https://www.bilibili.com/video/BV13WGb6YELm/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E9%AB%98%E8%84%9A%E6%9D%AF%E6%B7%B1%E8%B9%B2%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "sq_back",
+      "name": "杠铃背蹲",
+      "pattern": "squat",
+      "pattern_cn": "蹲",
+      "primary": [
+        "股四头肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "三分半学会标准杠铃深蹲",
+          "url": "https://www.bilibili.com/video/BV1FU9LB5EGf/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E6%9D%A0%E9%93%83%E8%83%8C%E8%B9%B2%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "hg_bridge",
+      "name": "臀桥",
+      "pattern": "hinge",
+      "pattern_cn": "髋铰链",
+      "primary": [
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "臀桥 + 背部伸展",
+          "url": "https://www.bilibili.com/video/BV1cNVNzaEHQ/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E8%87%80%E6%A1%A5%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "hg_rdl",
+      "name": "哑铃罗马尼亚硬拉",
+      "pattern": "hinge",
+      "pattern_cn": "髋铰链",
+      "primary": [
+        "腘绳肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "罗马尼亚硬拉示范",
+          "url": "https://www.bilibili.com/video/BV1AxwSziEjS/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E7%BD%97%E9%A9%AC%E5%B0%BC%E4%BA%9A%E7%A1%AC%E6%8B%89%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "hg_sl",
+      "name": "单腿硬拉",
+      "pattern": "hinge",
+      "pattern_cn": "髋铰链",
+      "primary": [
+        "腘绳肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "新手硬拉最常见的 5 个错误",
+          "url": "https://www.bilibili.com/video/BV18xkdYQER8/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%8D%95%E8%85%BF%E7%A1%AC%E6%8B%89%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "hg_hipthrust",
+      "name": "臀推",
+      "pattern": "hinge",
+      "pattern_cn": "髋铰链",
+      "primary": [
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：臀推（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E8%87%80%E6%8E%A8%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "lu_split",
+      "name": "徒手弓步蹲",
+      "pattern": "lunge",
+      "pattern_cn": "单腿蹲",
+      "primary": [
+        "股四头肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "弓箭步蹲保姆级教学",
+          "url": "https://www.bilibili.com/video/BV1iV89zME8a/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BE%92%E6%89%8B%E5%BC%93%E6%AD%A5%E8%B9%B2%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "lu_walk",
+      "name": "行走弓步",
+      "pattern": "lunge",
+      "pattern_cn": "单腿蹲",
+      "primary": [
+        "股四头肌",
+        "臀大肌"
+      ],
+      "links": [
+        {
+          "title": "弓步蹲动作要领",
+          "url": "https://www.bilibili.com/video/BV1rmcXeyExk/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E8%A1%8C%E8%B5%B0%E5%BC%93%E6%AD%A5%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ph_incline",
+      "name": "上斜俯卧撑",
+      "pattern": "push_h",
+      "pattern_cn": "水平推",
+      "primary": [
+        "胸大肌",
+        "肱三头肌"
+      ],
+      "links": [
+        {
+          "title": "零基础俯卧撑入门教学",
+          "url": "https://www.bilibili.com/video/BV12KTJzvEWa/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E4%B8%8A%E6%96%9C%E4%BF%AF%E5%8D%A7%E6%92%91%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ph_pushup",
+      "name": "俯卧撑",
+      "pattern": "push_h",
+      "pattern_cn": "水平推",
+      "primary": [
+        "胸大肌",
+        "肱三头肌"
+      ],
+      "links": [
+        {
+          "title": "从零到一做好基础俯卧撑",
+          "url": "https://www.bilibili.com/video/BV13fiqYREPq/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E4%BF%AF%E5%8D%A7%E6%92%91%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ph_dbpress",
+      "name": "哑铃卧推",
+      "pattern": "push_h",
+      "pattern_cn": "水平推",
+      "primary": [
+        "胸大肌",
+        "肱三头肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：哑铃卧推（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%8D%A7%E6%8E%A8%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pv_dbpress",
+      "name": "哑铃肩推",
+      "pattern": "push_v",
+      "pattern_cn": "垂直推",
+      "primary": [
+        "三角肌前束",
+        "肱三头肌"
+      ],
+      "links": [
+        {
+          "title": "坐姿哑铃推肩教学",
+          "url": "https://www.bilibili.com/video/BV1CZhe6JEjM/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E8%82%A9%E6%8E%A8%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pv_band",
+      "name": "弹力带肩推",
+      "pattern": "push_v",
+      "pattern_cn": "垂直推",
+      "primary": [
+        "三角肌前束"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：弹力带肩推（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E8%82%A9%E6%8E%A8%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pl_rowb",
+      "name": "弹力带划船",
+      "pattern": "pull_h",
+      "pattern_cn": "水平拉",
+      "primary": [
+        "背阔肌",
+        "中斜方",
+        "菱形肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：弹力带划船（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E5%88%92%E8%88%B9%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pl_dbrow",
+      "name": "哑铃单臂划船",
+      "pattern": "pull_h",
+      "pattern_cn": "水平拉",
+      "primary": [
+        "背阔肌",
+        "菱形肌"
+      ],
+      "links": [
+        {
+          "title": "单臂哑铃划船教学",
+          "url": "https://www.bilibili.com/video/BV1RS42197BT/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%8D%95%E8%87%82%E5%88%92%E8%88%B9%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pl_prone_w",
+      "name": "俯卧 W 抬臂",
+      "pattern": "pull_h",
+      "pattern_cn": "水平拉",
+      "primary": [
+        "中斜方",
+        "菱形肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：俯卧 W 抬臂（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E4%BF%AF%E5%8D%A7%20W%20%E6%8A%AC%E8%87%82%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pl_invrow",
+      "name": "反向划船",
+      "pattern": "pull_h",
+      "pattern_cn": "水平拉",
+      "primary": [
+        "背阔肌",
+        "菱形肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：反向划船（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%8F%8D%E5%90%91%E5%88%92%E8%88%B9%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pl_pullup",
+      "name": "引体向上",
+      "pattern": "pull_v",
+      "pattern_cn": "垂直拉",
+      "primary": [
+        "背阔肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：引体向上（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%95%E4%BD%93%E5%90%91%E4%B8%8A%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pv_latpull",
+      "name": "高位下拉",
+      "pattern": "pull_v",
+      "pattern_cn": "垂直拉",
+      "primary": [
+        "背阔肌"
+      ],
+      "links": [
+        {
+          "title": "练背首选高位下拉",
+          "url": "https://www.bilibili.com/video/BV1VfqWBDEzD/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E9%AB%98%E4%BD%8D%E4%B8%8B%E6%8B%89%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "pv_bandpull",
+      "name": "弹力带下拉",
+      "pattern": "pull_v",
+      "pattern_cn": "垂直拉",
+      "primary": [
+        "背阔肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：弹力带下拉（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E4%B8%8B%E6%8B%89%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "co_deadbug",
+      "name": "死虫",
+      "pattern": "core",
+      "pattern_cn": "核心",
+      "primary": [
+        "腹横肌"
+      ],
+      "links": [
+        {
+          "title": "死虫式核心发力讲解",
+          "url": "https://www.bilibili.com/video/BV1q28m63ELB/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E6%AD%BB%E8%99%AB%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "co_plank",
+      "name": "平板支撑",
+      "pattern": "core",
+      "pattern_cn": "核心",
+      "primary": [
+        "腹横肌",
+        "腹直肌"
+      ],
+      "links": [
+        {
+          "title": "平板支撑动作详解与纠错",
+          "url": "https://www.bilibili.com/video/BV1444y1V7t2/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%B9%B3%E6%9D%BF%E6%94%AF%E6%92%91%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "co_side",
+      "name": "侧平板",
+      "pattern": "core",
+      "pattern_cn": "核心",
+      "primary": [
+        "腹斜肌"
+      ],
+      "links": [
+        {
+          "title": "平板支撑正确细节",
+          "url": "https://www.bilibili.com/video/BV1fPVy6sEV8/",
+          "type": "video"
+        },
+        {
+          "title": "换更短的（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E4%BE%A7%E5%B9%B3%E6%9D%BF%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "co_birddog",
+      "name": "鸟狗",
+      "pattern": "core",
+      "pattern_cn": "核心",
+      "primary": [
+        "竖脊肌",
+        "腹横肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：鸟狗（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E9%B8%9F%E7%8B%97%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "co_hang",
+      "name": "悬垂举腿",
+      "pattern": "core",
+      "pattern_cn": "核心",
+      "primary": [
+        "腹直肌",
+        "髂腰肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：悬垂举腿（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E6%82%AC%E5%9E%82%E4%B8%BE%E8%85%BF%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ca_farmer",
+      "name": "单臂农夫走",
+      "pattern": "carry",
+      "pattern_cn": "负重行走",
+      "primary": [
+        "核心",
+        "斜方肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：单臂农夫走（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%8D%95%E8%87%82%E5%86%9C%E5%A4%AB%E8%B5%B0%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ar_curl",
+      "name": "哑铃弯举",
+      "pattern": "arms",
+      "pattern_cn": "手臂",
+      "primary": [
+        "肱二头肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：哑铃弯举（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%BC%AF%E4%B8%BE%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ar_pushdown",
+      "name": "绳索下压",
+      "pattern": "arms",
+      "pattern_cn": "手臂",
+      "primary": [
+        "肱三头肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：绳索下压（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E7%BB%B3%E7%B4%A2%E4%B8%8B%E5%8E%8B%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ar_bandcurl",
+      "name": "弹力带弯举",
+      "pattern": "arms",
+      "pattern_cn": "手臂",
+      "primary": [
+        "肱二头肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：弹力带弯举（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E5%BC%AF%E4%B8%BE%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ar_lateral",
+      "name": "哑铃侧平举",
+      "pattern": "arms",
+      "pattern_cn": "手臂",
+      "primary": [
+        "三角肌中束"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：哑铃侧平举（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E4%BE%A7%E5%B9%B3%E4%B8%BE%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "ar_facepull",
+      "name": "弹力带面拉",
+      "pattern": "pull_h",
+      "pattern_cn": "水平拉",
+      "primary": [
+        "后三角",
+        "中斜方"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：弹力带面拉（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E9%9D%A2%E6%8B%89%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "cf_raise",
+      "name": "提踵",
+      "pattern": "calf",
+      "pattern_cn": "小腿",
+      "primary": [
+        "小腿三头肌"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：提踵（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E6%8F%90%E8%B8%B5%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "cd_walk",
+      "name": "快走",
+      "pattern": "conditioning",
+      "pattern_cn": "心肺",
+      "primary": [
+        "心肺"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：快走（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%BF%AB%E8%B5%B0%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "cd_interval",
+      "name": "间歇跑",
+      "pattern": "conditioning",
+      "pattern_cn": "心肺",
+      "primary": [
+        "心肺"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：间歇跑（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E9%97%B4%E6%AD%87%E8%B7%91%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    },
+    {
+      "id": "cd_rower",
+      "name": "划船机",
+      "pattern": "conditioning",
+      "pattern_cn": "心肺",
+      "primary": [
+        "心肺",
+        "背"
+      ],
+      "links": [
+        {
+          "title": "B 站搜索：划船机（10 分钟内）",
+          "url": "https://search.bilibili.com/all?keyword=%E5%88%92%E8%88%B9%E6%9C%BA%20%E6%A0%87%E5%87%86%E5%8A%A8%E4%BD%9C%20%E6%95%99%E5%AD%A6&duration=1",
+          "type": "search"
+        }
+      ]
+    }
+  ]
+}
