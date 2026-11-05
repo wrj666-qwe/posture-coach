@@ -314,6 +314,18 @@ python scripts/adjust_plan.py --selftest      # 调整：7 条规则
 
 > 本方案仅体态矫正训练参考，若关节持续疼痛、有脊柱损伤、术后等情况，请停止训练并咨询医生/线下康复师。
 
+## 在线 Demo（小白版）
+
+`product/index.html` 是给健身小白用的极简版：选 3 个条件 → 生成一周计划 → 打卡 → 下周调整建议。
+
+部署到 GitHub Pages 后可直接访问：
+
+```
+https://wrj666-qwe.github.io/posture-coach/product/
+```
+
+单文件、无后端、数据只存浏览器本地。
+
 ## License
 
 代码用 **MIT**（见 `LICENSE`）；文字内容与动作库建议同样以 MIT 发布，保留安全声明即可。

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小白健身计划生成器</title>
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--ink:#18261f;--muted:#71847d;--line:#e5e1d6;--teal:#0f6b5f;--teal-l:#e6f2ef;--amber:#9a5606;--amber-l:#fdf2e0;--hot:#b2452f;--r:14px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "PingFang SC","Microsoft YaHei",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:18px 16px 60px}
+.safety{background:var(--amber-l);border:1px solid #f0d9b0;color:var(--amber);border-radius:11px;padding:10px 12px;font-size:12px;line-height:1.55;margin-bottom:16px}
+h1{font-size:22px;margin:0 0 4px;letter-spacing:-.3px}
+.sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(23,37,31,.04)}
+.card h2{font-size:15px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.card h2 i{font-style:normal;width:20px;height:20px;border-radius:6px;background:var(--teal);color:#fff;font-size:11px;display:grid;place-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #d6d1c2;background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;color:#3d5049;cursor:pointer}
+.chip.on{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:600}
+.btn{width:100%;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:14px;font-size:15px;font-weight:600;cursor:pointer;margin-top:6px}
+.btn:disabled{opacity:.45}
+.btn.ghost{background:#fff;color:#3d5049;border:1px solid #d6d1c2;font-weight:500}
+.day{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.day h3{margin:0 0 8px;font-size:14px}
+.task{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px dashed #eee9dd}
+.task:first-of-type{border-top:0}
+.tick{width:19px;height:19px;border:1.5px solid #c9c4b6;border-radius:6px;flex:0 0 19px;margin-top:2px;cursor:pointer}
+.task.done .tick{background:#1d6b3f;border-color:#1d6b3f}
+.tick::after{content:"";display:none;width:5px;height:9px;border:2px solid #fff;border-top:0;border-left:0;transform:rotate(42deg);margin:1px 0 0 5px}
+.task.done .tick::after{display:block}
+.t-main{flex:1;min-width:0}
+.t-name{font-size:13.5px;font-weight:600}
+.task.done .t-name{text-decoration:line-through;color:var(--muted)}
+.t-meta{font-size:11.5px;color:var(--muted);margin-top:2px}
+.t-meta a{color:var(--hot);text-decoration:none;margin-left:6px}
+.t-meta a:hover{text-decoration:underline}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.field{margin-top:12px}
+.field label{display:flex;justify-content:space-between;font-size:12.5px;color:#3d5049;margin-bottom:4px}
+.field label b{color:var(--teal)}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.kv{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px dashed #eee9dd}
+.kv:last-child{border-bottom:0}
+.note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6}
+.hidden{display:none}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:var(--teal-l);color:var(--teal);margin-left:6px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(16px);opacity:0;background:#18261f;color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;transition:.2s;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="safety">⚠ 安全提示：本工具仅提供训练参考，不替代现场指导与医疗建议。持续疼痛、麻木、脊柱损伤、术后、孕期请先咨询医生/康复师，出现胸闷头晕立即停止。</div>
+
+  <h1>小白健身计划生成器</h1>
+  <p class="sub">选 3 个条件，给你一周能照着做的计划。不需要懂动作名称。</p>
+
+  <div id="setup">
+    <div class="card">
+      <h2><i>1</i>你想练成什么样</h2>
+      <div class="chips" id="goalChips">
+        <button class="chip" data-goal="muscle">想壮一点</button>
+        <button class="chip" data-goal="fat">想瘦一点</button>
+        <button class="chip" data-goal="health">身体好一点</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i>2</i>一周能练几天</h2>
+      <div class="chips" id="dayChips">
+        <button class="chip" data-days="2">2 天</button>
+        <button class="chip" data-days="3">3 天</button>
+        <button class="chip" data-days="4">4 天</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><i>3</i>你手边有什么</h2>
+      <div class="chips" id="eqChips">
+        <button class="chip" data-eq="none">徒手</button>
+        <button class="chip" data-eq="dumbbell">哑铃</button>
+        <button class="chip" data-eq="gym">健身房</button>
+      </div>
+      <p class="note">不确定就选徒手，先练 2 周再加器械。</p>
+    </div>
+
+    <button class="btn" id="genBtn" disabled>生成我的计划</button>
+  </div>
+
+  <div id="plan" class="hidden"></div>
+
+  <div id="checkin" class="hidden">
+    <div class="card">
+      <h2><i>✓</i>本周打卡</h2>
+      <div class="field">
+        <label>训练后身体感受（0 = 没事，10 = 很痛）<b id="painVal">2</b></label>
+        <input type="range" id="pain" min="0" max="10" step="1" value="2">
+      </div>
+      <div class="field">
+        <label>累不累（1 = 很轻松，10 = 力竭）<b id="rpeVal">6</b></label>
+        <input type="range" id="rpe" min="1" max="10" step="1" value="6">
+      </div>
+      <button class="btn" id="saveBtn">保存，看看下周怎么调</button>
+      <div id="advice" class="note"></div>
+    </div>
+  </div>
+
+  <p class="note" style="text-align:center;margin-top:22px">数据只存在你的浏览器里，不上传服务器。</p>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- 动作库（小白版，只保留基础动作） ---------- */
+const EX = [
+  // 蹲
+  {id:'sq', n:'箱式深蹲', p:'squat', eq:['none'], lv:1, main:'腿/臀', cue:'屁股向后找凳子，脚掌三点踩实'},
+  {id:'sq2', n:'高脚杯深蹲', p:'squat', eq:['dumbbell','gym'], lv:1, main:'腿/臀', cue:'哑铃贴胸，膝跟脚尖同向'},
+  {id:'sq3', n:'腿举机', p:'squat', eq:['gym'], lv:1, main:'腿/臀', cue:'下放至膝约 90°，别让腰离垫'},
+  // 髋
+  {id:'hg', n:'臀桥', p:'hinge', eq:['none','dumbbell','gym'], lv:1, main:'臀/腿后', cue:'先收腹再顶髋，顶端停 2 秒'},
+  {id:'hg2', n:'哑铃罗马尼亚硬拉', p:'hinge', eq:['dumbbell','gym'], lv:1, main:'臀/腿后', cue:'屁股向后推，哑铃贴腿，背不塌'},
+  // 单腿
+  {id:'lu', n:'弓步蹲', p:'lunge', eq:['none','dumbbell','gym'], lv:1, main:'腿/臀', cue:'前后分腿，垂直下沉，膝对脚尖'},
+  // 推
+  {id:'ph', n:'上斜俯卧撑', p:'push', eq:['none','dumbbell','gym'], lv:1, main:'胸/三头', cue:'手撑桌沿，身体一条线，肘 45°'},
+  {id:'ph2', n:'哑铃卧推', p:'push', eq:['dumbbell','gym'], lv:1, main:'胸/三头', cue:'肩胛后缩，手腕在肘上方'},
+  {id:'ph3', n:'坐姿推胸机', p:'push', eq:['gym'], lv:1, main:'胸/三头', cue:'把手与乳头齐平，别锁死肘'},
+  {id:'pv', n:'哑铃肩推', p:'push_v', eq:['dumbbell','gym'], lv:1, main:'肩', cue:'肋骨下沉，别过度后仰'},
+  // 拉
+  {id:'pl', n:'弹力带划船', p:'pull', eq:['none','dumbbell','gym'], lv:1, main:'背', cue:'先沉肩再拉，肘贴身向后'},
+  {id:'pl2', n:'哑铃单臂划船', p:'pull', eq:['dumbbell','gym'], lv:1, main:'背', cue:'背平直，肘向髋部拉'},
+  {id:'pl3', n:'高位下拉', p:'pull', eq:['gym'], lv:1, main:'背', cue:'胸口抬起，肘向下沉，拉到锁骨'},
+  {id:'pl4', n:'坐姿划船机', p:'pull', eq:['gym'], lv:1, main:'背', cue:'先沉肩再拉，别用腰后仰'},
+  // 核心
+  {id:'co', n:'死虫', p:'core', eq:['none','dumbbell','gym'], lv:1, main:'核心', cue:'腰贴地，对侧手脚慢慢伸'},
+  {id:'co2', n:'平板支撑', p:'core', eq:['none','dumbbell','gym'], lv:1, main:'核心', cue:'肘在肩下，臀不塌不翘'},
+  {id:'co3', n:'鸟狗', p:'core', eq:['none','dumbbell','gym'], lv:1, main:'核心', cue:'四点跪，对侧手脚伸出，骨盆不晃'},
+  // 手臂/小腿
+  {id:'ar', n:'哑铃弯举', p:'arms', eq:['dumbbell','gym'], lv:1, main:'手臂', cue:'肘固定，别甩腰'},
+  {id:'cf', n:'提踵', p:'calf', eq:['none','dumbbell','gym'], lv:1, main:'小腿', cue:'慢慢起落，最高点停 1 秒'},
+];
+
+const VIDEO = {
+  '箱式深蹲':'https://www.bilibili.com/video/BV1xdCbYgEiQ/',
+  '高脚杯深蹲':'https://www.bilibili.com/video/BV13WGb6YELm/',
+  '臀桥':'https://www.bilibili.com/video/BV1cNVNzaEHQ/',
+  '哑铃罗马尼亚硬拉':'https://www.bilibili.com/video/BV1AxwSziEjS/',
+  '弓步蹲':'https://www.bilibili.com/video/BV1iV89zME8a/',
+  '上斜俯卧撑':'https://www.bilibili.com/video/BV12KTJzvEWa/',
+  '哑铃卧推':'https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%8D%A7%E6%8E%A8%20%E6%95%99%E5%AD%A6&duration=1',
+  '哑铃肩推':'https://www.bilibili.com/video/BV1CZhe6JEjM/',
+  '弹力带划船':'https://search.bilibili.com/all?keyword=%E5%BC%B9%E5%8A%9B%E5%B8%A6%E5%88%92%E8%88%B9%20%E6%95%99%E5%AD%A6&duration=1',
+  '哑铃单臂划船':'https://www.bilibili.com/video/BV1RS42197BT/',
+  '高位下拉':'https://www.bilibili.com/video/BV1VfqWBDEzD/',
+  '死虫':'https://www.bilibili.com/video/BV1q28m63ELB/',
+  '平板支撑':'https://www.bilibili.com/video/BV1444y1V7t2/',
+  '坐姿划船机':'https://search.bilibili.com/all?keyword=%E5%9D%90%E5%A7%BF%E5%88%92%E8%88%B9%20%E6%95%99%E5%AD%A6&duration=1',
+  '腿举机':'https://search.bilibili.com/all?keyword=%E8%85%BF%E4%B8%BE%E6%9C%BA%20%E6%95%99%E5%AD%A6&duration=1',
+  '坐姿推胸机':'https://search.bilibili.com/all?keyword=%E5%9D%90%E5%A7%BF%E6%8E%A8%E8%83%B8%E6%9C%BA%20%E6%95%99%E5%AD%A6&duration=1',
+  '鸟狗':'https://search.bilibili.com/all?keyword=%E9%B8%9F%E7%8B%97%20%E6%A0%B8%E5%BF%83%20%E6%95%99%E5%AD%A6&duration=1',
+  '哑铃弯举':'https://search.bilibili.com/all?keyword=%E5%93%91%E9%93%83%E5%BC%AF%E4%B8%BE%20%E6%95%99%E5%AD%A6&duration=1',
+  '提踵':'https://search.bilibili.com/all?keyword=%E6%8F%90%E8%B8%B5%20%E6%95%99%E5%AD%A6&duration=1'
+};
+
+const GOAL = {
+  muscle:{name:'增肌', rep:'8–12', rpe:'7', rest:'90 秒', cardio:'2 次 × 20 分钟快走'},
+  fat:{name:'减脂', rep:'10–15', rpe:'7', rest:'60 秒', cardio:'3 次 × 25 分钟快走'},
+  health:{name:'健康体能', rep:'10–12', rpe:'6', rest:'75 秒', cardio:'3 次 × 20 分钟快走'}
+};
+
+const SPLITS = {
+  2:[['squat','push','pull','core'],['hinge','push_v','pull','core']],
+  3:[['squat','push','pull'],['hinge','push_v','pull','core'],['lunge','push','pull','core']],
+  4:[['push','push_v','pull','arms'],['squat','hinge','core'],['pull','push','arms'],['lunge','hinge','core']]
+};
+const DAYNAME = {2:['周一','周四'],3:['周一','周三','周五'],4:['周一','周二','周四','周五']};
+
+const S = {goal:null, days:null, eq:null, plan:null, done:{}, pain:2, rpe:6};
+
+/* ---------- 交互 ---------- */
+function bindChips(id, key, attr){
+  document.getElementById(id).addEventListener('click', e=>{
+    const b = e.target.closest('[data-'+attr+']'); if(!b) return;
+    [...b.parentNode.children].forEach(c=>c.classList.remove('on'));
+    b.classList.add('on');
+    S[key] = attr==='days' ? Number(b.dataset[attr]) : b.dataset[attr];
+    document.getElementById('genBtn').disabled = !(S.goal && S.days && S.eq);
+  });
+}
+bindChips('goalChips','goal','goal');
+bindChips('dayChips','days','days');
+bindChips('eqChips','eq','eq');
+
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('on');setTimeout(()=>el.classList.remove('on'),1800);}
+
+/* ---------- 生成 ---------- */
+function pick(pattern, eq, used){
+  const pool = EX.filter(e=>e.p===pattern && e.eq.includes(eq));
+  const fresh = pool.find(e=>!used.has(e.id));
+  const chosen = fresh || pool[0] || EX.find(e=>e.p===pattern);
+  if (chosen) used.add(chosen.id);
+  return chosen;
+}
+function buildPlan(){
+  const g = GOAL[S.goal];
+  const days = SPLITS[S.days];
+  const used = new Set();
+  const sessions = days.map((pats,i)=>({
+    day: DAYNAME[S.days][i],
+    ex: pats.map(p=>pick(p,S.eq,used)).filter(Boolean)
+  }));
+  return {sessions, g, total: sessions.reduce((a,s)=>a+s.ex.length,0)};
+}
+
+document.getElementById('genBtn').addEventListener('click', ()=>{
+  S.plan = buildPlan();
+  S.done = {};
+  renderPlan();
+  document.getElementById('setup').classList.add('hidden');
+  document.getElementById('plan').classList.remove('hidden');
+  document.getElementById('checkin').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+function renderPlan(){
+  const {sessions,g} = S.plan;
+  let html = `<div class="card"><h2><i>✓</i>你的一周计划<span class="pill">${g.name} · 每周 ${S.days} 天</span></h2>
+    <div class="kv"><span>每次时长</span><b>35–45 分钟</b></div>
+    <div class="kv"><span>动作次数</span><b>${g.rep} 次</b></div>
+    <div class="kv"><span>组间休息</span><b>${g.rest}</b></div>
+    <div class="kv"><span>有氧</span><b>${g.cardio}</b></div>
+    <p class="note">顺序：热身 5 分钟 → 按顺序做 → 拉伸 4 分钟。每组做到「还能再做 2 次」就停。</p></div>`;
+
+  sessions.forEach((s,si)=>{
+    html += `<div class="day"><h3>${s.day}　${s.ex.length} 个动作</h3>`;
+    s.ex.forEach((e,ei)=>{
+      const key = si+'-'+ei;
+      const v = VIDEO[e.n];
+      html += `<div class="task" data-key="${key}">
+        <span class="tick"></span>
+        <div class="t-main">
+          <div class="t-name">${e.n}</div>
+          <div class="t-meta">3 组 × ${g.rep} 次 · 休息 ${g.rest} · ${e.main}
+          ${v?`<a href="${v}" target="_blank" rel="noopener">▶ 看视频</a>`:''}</div>
+          <div class="t-meta">要点：${e.cue}</div>
+        </div></div>`;
+    });
+    html += `</div>`;
+  });
+
+  html += `<button class="btn ghost" id="againBtn">重新选条件</button>`;
+  document.getElementById('plan').innerHTML = html;
+
+  document.querySelectorAll('.task').forEach(t=>{
+    t.addEventListener('click', ()=>{
+      const k = t.dataset.key;
+      S.done[k] = !S.done[k];
+      t.classList.toggle('done', S.done[k]);
+    });
+  });
+  document.getElementById('againBtn').addEventListener('click', ()=>{
+    document.getElementById('setup').classList.remove('hidden');
+    document.getElementById('plan').classList.add('hidden');
+    document.getElementById('checkin').classList.add('hidden');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+}
+
+/* ---------- 预览模式：#demo ---------- */
+if (location.hash === '#demo') {
+  S.goal = 'muscle'; S.days = 3; S.eq = 'dumbbell';
+  document.querySelector('[data-goal=muscle]').classList.add('on');
+  document.querySelector('[data-days="3"]').classList.add('on');
+  document.querySelector('[data-eq=dumbbell]').classList.add('on');
+  document.getElementById('genBtn').disabled = false;
+  document.getElementById('genBtn').click();
+}
+
+/* ---------- 打卡与调整 ---------- */
+const pain = document.getElementById('pain'), rpe = document.getElementById('rpe');
+pain.addEventListener('input', ()=>{S.pain=+pain.value;document.getElementById('painVal').textContent=pain.value;});
+rpe.addEventListener('input', ()=>{S.rpe=+rpe.value;document.getElementById('rpeVal').textContent=rpe.value;});
+
+document.getElementById('saveBtn').addEventListener('click', ()=>{
+  const total = S.plan.total;
+  const done = Object.values(S.done).filter(Boolean).length;
+  const rate = Math.round(done/total*100);
+  let msg = '';
+  if(S.pain >= 4) msg = `完成 ${done}/${total}，疼痛 ${S.pain} 分 —— <b>下周减量</b>：每个动作只做 2 组，先做热身和拉伸，疼痛降到 2 分以下再加回来。`;
+  else if(rate >= 80 && S.pain <= 2) msg = `完成 ${done}/${total}，疼痛 ${S.pain} 分 —— <b>下周加量</b>：每个动作加 1 组，或每次多做 2 次。`;
+  else if(rate < 50) msg = `完成 ${done}/${total} —— 次数太少，<b>下周改成每次只做 3 个动作</b>，先把习惯建立起来。`;
+  else msg = `完成 ${done}/${total}，疼痛 ${S.pain} 分 —— <b>保持现状</b>，把动作做标准比加量重要。`;
+  document.getElementById('advice').innerHTML = msg;
+  toast('已记录');
+});
+</script>
+</body>
+</html>
